@@ -93,6 +93,7 @@ while i <= len(mon):
 ```
 
 Визуализация результата:
+
 ![image](https://github.com/truefolder/AD_ingamedev_lab2/assets/89926388/04c15aac-d977-4324-a32a-9299cea4bb92)
 
 ## Задание 3
