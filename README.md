@@ -78,7 +78,8 @@ gc = gspread.service_account(filename='stalwart-edge-361617-65c49b91499f.json')
 sh = gc.open("dawsdasdas")
 money = 500
 i = 0
-while i <= len(mon):
+iters = 60
+while i <= 100:
     i += 1
     if i == 0:
         continue
@@ -87,18 +88,20 @@ while i <= len(mon):
             money /= 2
         else:
             money = money * 3
-        sh.sheet1.update(('A' + str(i)), str(i) + " итерация")
+        sh.sheet1.update(('A' + str(i)), str(i))
         sh.sheet1.update(('B' + str(i)), str(money).replace('.', ','))
         print(money)
 ```
 
 Визуализация результата:
 
-![image](https://github.com/truefolder/AD_ingamedev_lab2/assets/89926388/04c15aac-d977-4324-a32a-9299cea4bb92)
+![image](https://github.com/truefolder/AD_ingamedev_lab2/assets/89926388/dddde6bc-ec91-4050-904e-9ba49fdc3a5b)
+
 
 ## Задание 3
 ### Настройте на сцене Unity воспроизведение звуковых файлов, описывающих динамику изменения выбранной переменной. Например, если выбрано здоровье главного персонажа вы можете выводить сообщения, связанные с его состоянием.
-
+Так как выбранная мною стратегия не учитывает огромное количество факторов и способов заработка золота в игре, она стабильно растёт и её значение лишь увеличивается.
+В игре есть достижения за заработанное золото, поэтому я решил выводить сообщения каждый раз когда игрок разблокирует подобное достижение в игре.
 
 ## Выводы
 
